@@ -721,10 +721,10 @@ export default function App() {
                         <span>Individual Farm</span>
                       </div>
                       <div className="text-2xl font-black text-stone-900 leading-none mb-1">
-                        Pay-Per-Scan
+                        Rp 25k
                       </div>
                       <div className="text-xs text-stone-500 font-mono mb-4 leading-none">
-                        Flexible Pricing
+                        /ha /scan
                       </div>
                       <ul className="text-sm text-stone-600 space-y-2 font-light flex-1 overflow-hidden">
                         <li>• Only pay when you need an inspection</li>
@@ -738,13 +738,13 @@ export default function App() {
                         Through Your Koperasi
                       </div>
                       <div className="text-2xl font-black text-stone-900 leading-none mb-1">
-                        Group Coverage
+                        Rp 2.5m
                       </div>
                       <div className="text-xs text-stone-500 font-mono mb-4 leading-none">
-                        Best Value
+                        /month
                       </div>
                       <ul className="text-sm text-stone-600 space-y-2 font-light flex-1 overflow-hidden">
-                        <li>• We fly the entire union's land together</li>
+                        <li>• Up to 500 hectares covered together</li>
                         <li>• Greatly reduced cost per hectare</li>
                         <li>• Get regular monthly health checkups</li>
                       </ul>
