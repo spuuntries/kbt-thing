@@ -17,6 +17,8 @@ import { domToJpeg } from 'modern-screenshot';
 import rgbPic from './assets/rgb-pic.png';
 import nirTranslation from './assets/nir-translation.png';
 import sickLocated from './assets/sick-located.png';
+import yesGanoderma from './assets/yes-ganoderma.png';
+import noGanoderma from './assets/no-ganoderma.png';
 
 const investorSlides = [
   { id: 'title' },
@@ -175,12 +177,18 @@ export default function App() {
                   <h3 className="text-3xl font-bold text-stone-900 tracking-tight mb-4 shrink-0">
                     {t("The Silent Killer", "Pembunuh Senyap")}
                   </h3>
-                  <p className="text-stone-600 text-xl font-light leading-relaxed flex-1 overflow-hidden">
+                  <p className="text-stone-600 text-xl font-light leading-relaxed mb-6">
                     {t(
                       "Ganoderma (Basal Stem Rot) ruins yields and lingers in soil. By the time visual symptoms appear to the human eye, the tree is already dead and infecting the surrounding plot.",
-                      "Ganoderma (Busuk Pangkal Batang) menghancurkan hasil panen dan bertahan di tanah. Pada saat gejala visual muncul di mata manusia, pohon tersebut sudah mati dan menulari area sekitarnya."
+                      "Ganoderma (Busuk Pangkal Batang) menghancurkan hasil panen dan bertahan di tanah. Pada saat gejala sudah terlihat, pohon tersebut sudah mati dan menulari area sekitarnya."
                     )}
                   </p>
+                  <div className="flex-1 min-h-[160px] border border-stone-300 overflow-hidden relative">
+                    <img src={yesGanoderma} alt="With Ganoderma" className="absolute inset-0 w-full h-full object-cover" />
+                    <div className="absolute top-3 left-3 bg-[#8b5a2b] text-white px-2 py-1 text-xs font-mono uppercase tracking-wider">
+                      {t("Late Stage (Sick)", "Stadium Akhir (Sakit)")}
+                    </div>
+                  </div>
                 </div>
                 <div className="flex-1 border-t-2 border-stone-900 pt-6 flex flex-col">
                   <div className="text-[#4a5d23] mb-4">
@@ -189,12 +197,18 @@ export default function App() {
                   <h3 className="text-3xl font-bold text-stone-900 tracking-tight mb-4 shrink-0">
                     {t("The Hardware Barrier", "Kendala Perangkat Keras")}
                   </h3>
-                  <p className="text-stone-600 text-xl font-light leading-relaxed flex-1 overflow-hidden">
+                  <p className="text-stone-600 text-xl font-light leading-relaxed mb-6">
                     {t(
                       "True multispectral drones cost upwards of $10,000. Smallholder farmers—who own 41% of plantations—literally cannot afford the hardware needed to detect stress early.",
-                      "Drone multispektral yang sebenarnya berharga lebih dari $10.000. Petani kecil—yang memiliki 41% perkebunan—benar-benar tidak mampu membeli perangkat keras yang dibutuhkan untuk mendeteksi stres sejak dini."
+                      "Drone multispektral yang harganya lebih dari $10.000. Petani kecil—yang memiliki 41% perkebunan—tidak mampu membeli perangkat keras untuk mendeteksi masalah sejak dini."
                     )}
                   </p>
+                  <div className="flex-1 min-h-[160px] border border-stone-300 overflow-hidden relative">
+                    <img src={noGanoderma} alt="No Ganoderma" className="absolute inset-0 w-full h-full object-cover" />
+                    <div className="absolute top-3 left-3 bg-[#4a5d23] text-white px-2 py-1 text-xs font-mono uppercase tracking-wider">
+                      {t("Healthy Canopy", "Kanopi Sehat")}
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -522,9 +536,15 @@ export default function App() {
                   <h3 className="text-3xl font-bold text-stone-900 tracking-tight mb-4 shrink-0">
                     {t("The Silent Thief (Ganoderma)", "Pencuri Tersembunyi (Ganoderma)")}
                   </h3>
-                  <p className="text-stone-600 text-xl font-light leading-relaxed flex-1 overflow-hidden">
+                  <p className="text-stone-600 text-xl font-light leading-relaxed mb-6">
                     {t("Ganoderma spreads quietly underground. By the time you notice yellowing fronds or wilting, the tree is gone—and it's probably already infected its neighbors.", "Ganoderma menyebar diam-diam di bawah tanah. Saat Anda melihat pelepah menguning atau layu, pohonnya sudah mati—dan kemungkinan sudah menulari sekitarnya.")}
                   </p>
+                  <div className="flex-1 min-h-[160px] border border-stone-300 overflow-hidden relative">
+                    <img src={yesGanoderma} alt="With Ganoderma" className="absolute inset-0 w-full h-full object-cover" />
+                    <div className="absolute top-3 left-3 bg-[#8b5a2b] text-white px-2 py-1 text-xs font-mono uppercase tracking-wider">
+                      {t("Infected Palm", "Sawit Terinfeksi")}
+                    </div>
+                  </div>
                 </div>
                 <div className="flex-1 border-t-2 border-stone-900 pt-6 flex flex-col">
                   <div className="text-[#4a5d23] mb-4">
@@ -533,9 +553,15 @@ export default function App() {
                   <h3 className="text-3xl font-bold text-stone-900 tracking-tight mb-4 shrink-0">
                     {t("Blind Guessing", "Menebak Buta")}
                   </h3>
-                  <p className="text-stone-600 text-xl font-light leading-relaxed flex-1 overflow-hidden">
+                  <p className="text-stone-600 text-xl font-light leading-relaxed mb-6">
                     {t("Checking trees by foot on large plots is too slow, and specialized farm drones are too expensive for most independent smallholders to buy themselves.", "Memeriksa pohon di lahan luas sangat lambat, dan drone perkebunan khusus sangat mahal untuk dibeli mayoritas petani mandiri.")}
                   </p>
+                  <div className="flex-1 min-h-[160px] border border-stone-300 overflow-hidden relative">
+                    <img src={noGanoderma} alt="No Ganoderma" className="absolute inset-0 w-full h-full object-cover" />
+                    <div className="absolute top-3 left-3 bg-[#4a5d23] text-white px-2 py-1 text-xs font-mono uppercase tracking-wider">
+                      {t("Healthy Palm", "Sawit Sehat")}
+                    </div>
+                  </div>
                 </div>
               </div>
 
