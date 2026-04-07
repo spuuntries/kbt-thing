@@ -14,6 +14,9 @@ import {
   Loader2,
 } from 'lucide-react';
 import { domToJpeg } from 'modern-screenshot';
+import rgbPic from './assets/rgb-pic.png';
+import nirTranslation from './assets/nir-translation.png';
+import sickLocated from './assets/sick-located.png';
 
 const investorSlides = [
   { id: 'title' },
@@ -26,6 +29,7 @@ const farmerSlides = [
   { id: 'title_farmer' },
   { id: 'problem_farmer' },
   { id: 'solution_farmer' },
+  { id: 'demo_farmer' },
   { id: 'value_farmer' },
 ];
 
@@ -590,6 +594,87 @@ export default function App() {
                 </p>
                 <div className="mt-auto font-mono text-xs text-[#4a5d23] bg-[#c2d49a] p-3 shrink-0 leading-relaxed">
                   Precise removal. Less spreading. Better harvest.
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+
+      case 'demo_farmer':
+        return (
+          <div className="h-full flex flex-col p-12">
+            <div className="flex items-start justify-between mb-8 shrink-0">
+              <h2 className="text-5xl font-black text-stone-900 tracking-tighter leading-none">
+                see it in action.
+              </h2>
+              <span
+                className="font-mono text-sm tracking-widest text-[#4a5d23] uppercase border border-[#4a5d23] px-3 py-1.5 shrink-0 whitespace-nowrap"
+                style={{ lineHeight: 1 }}
+              >
+                Scan To Detection
+              </span>
+            </div>
+
+            <div className="flex gap-4 flex-1 min-h-0">
+              <div className="flex-1 flex flex-col gap-3">
+                <div className="bg-[#f4f1ea] border border-stone-300 p-4 shrink-0">
+                  <h4 className="font-bold text-lg text-stone-900 leading-none mb-1">
+                    01. RGB Scan
+                  </h4>
+                  <p className="text-sm text-stone-600 font-light leading-snug">
+                    Standard commercial drone imagery.
+                  </p>
+                </div>
+                <div className="flex-1 border border-stone-300 overflow-hidden relative bg-stone-100 flex items-center justify-center p-2">
+                  <img
+                    src={rgbPic}
+                    alt="RGB scan"
+                    className="w-full h-full object-cover shadow-sm bg-white"
+                  />
+                </div>
+              </div>
+
+              <div className="flex items-center text-stone-300 pt-16">
+                <ArrowRight className="w-8 h-8" />
+              </div>
+
+              <div className="flex-1 flex flex-col gap-3">
+                <div className="bg-[#f4f1ea] border border-stone-300 p-4 shrink-0">
+                  <h4 className="font-bold text-lg text-stone-900 leading-none mb-1">
+                    02. NIR Generation
+                  </h4>
+                  <p className="text-sm text-stone-600 font-light leading-snug">
+                    AI synthesizes near-infrared data.
+                  </p>
+                </div>
+                <div className="flex-1 border border-stone-300 overflow-hidden relative bg-stone-100 flex items-center justify-center p-2">
+                  <img
+                    src={nirTranslation}
+                    alt="NIR translation"
+                    className="w-full h-full object-cover shadow-sm bg-white"
+                  />
+                </div>
+              </div>
+
+              <div className="flex items-center text-stone-300 pt-16">
+                <ArrowRight className="w-8 h-8" />
+              </div>
+
+              <div className="flex-1 flex flex-col gap-3">
+                <div className="bg-[#4a5d23] border border-[#5f7434] p-4 shrink-0">
+                  <h4 className="font-bold text-lg text-white leading-none mb-1">
+                    03. Detection
+                  </h4>
+                  <p className="text-sm text-[#c2d49a] font-light leading-snug">
+                    Sick canopy flagged for removal.
+                  </p>
+                </div>
+                <div className="flex-1 border border-[#4a5d23] overflow-hidden relative bg-stone-900 flex items-center justify-center p-2">
+                  <img
+                    src={sickLocated}
+                    alt="Sick plant located"
+                    className="w-full h-full object-cover shadow-sm bg-stone-800"
+                  />
                 </div>
               </div>
             </div>
