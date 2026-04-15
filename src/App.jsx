@@ -594,11 +594,11 @@ export default function App() {
               {/* TOP ROW: 5 Columns */}
               <div className="flex-[2] flex gap-4 min-h-0">
                 {/* Key Partners */}
-                <div className="flex-1 bg-[#f4f1ea] border border-stone-300 p-5 flex flex-col overflow-hidden">
-                  <h3 className="font-mono text-xs uppercase tracking-widest text-stone-500 mb-4 shrink-0 leading-none">
+                <div className="flex-1 bg-[#f4f1ea] border border-stone-300 p-4 flex flex-col overflow-hidden">
+                  <h3 className="font-mono text-xs uppercase tracking-widest text-stone-500 mb-3 shrink-0 leading-none">
                     {t("Key Partners", "Mitra Utama")}
                   </h3>
-                  <ul className="text-sm text-stone-800 font-medium space-y-3 flex-1 overflow-y-auto">
+                  <ul className="text-sm text-stone-800 font-medium space-y-2 flex-1 overflow-hidden">
                     <li className="flex items-start gap-2"><span className="text-[#8b5a2b] mt-0.5">●</span> <span>{t("Local Cooperatives (KUD)", "Koperasi Unit Desa (KUD)")}</span></li>
                     <li className="flex items-start gap-2"><span className="text-[#8b5a2b] mt-0.5">●</span> <span>{t("Agritech Communities", "Komunitas Agritech")}</span></li>
                     <li className="flex items-start gap-2"><span className="text-[#8b5a2b] mt-0.5">●</span> <span>{t("Academic / Research Institutions", "Institusi Akademik / Riset")}</span></li>
@@ -608,90 +608,90 @@ export default function App() {
 
                 {/* Key Activities & Resources */}
                 <div className="flex-1 flex flex-col gap-4 min-h-0">
-                  <div className="flex-1 bg-white border border-stone-300 p-5 flex flex-col overflow-hidden">
-                    <h3 className="font-mono text-xs uppercase tracking-widest text-stone-500 mb-4 shrink-0 leading-none">
+                  <div className="flex-1 bg-white border border-stone-300 p-4 flex flex-col overflow-hidden">
+                    <h3 className="font-mono text-[10px] uppercase tracking-widest text-stone-500 mb-2 shrink-0 leading-none">
                       {t("Key Activities", "Aktivitas Utama")}
                     </h3>
-                    <ul className="text-sm text-stone-800 font-medium space-y-2 flex-1 overflow-y-auto">
-                      <li className="flex items-start gap-2"><span className="text-[#4a5d23] mt-0.5">●</span> <span>{t("AI/ML Model Fine-Tuning", "Penyempurnaan Model AI/ML")}</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#4a5d23] mt-0.5">●</span> <span>{t("Cloud Platform Dev", "Pengembangan Platform Cloud")}</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#4a5d23] mt-0.5">●</span> <span>{t("Heatmap Generation", "Generasi Heatmap")}</span></li>
+                    <ul className="text-xs text-stone-800 font-medium space-y-1.5 flex-1 overflow-hidden">
+                      <li className="flex items-start gap-1.5"><span className="text-[#4a5d23] mt-0.5">●</span> <span>{t("AI/ML Model Fine-Tuning", "Penyempurnaan Model AI/ML")}</span></li>
+                      <li className="flex items-start gap-1.5"><span className="text-[#4a5d23] mt-0.5">●</span> <span>{t("Cloud Platform Dev", "Pengembangan Platform Cloud")}</span></li>
+                      <li className="flex items-start gap-1.5"><span className="text-[#4a5d23] mt-0.5">●</span> <span>{t("Heatmap Generation", "Generasi Heatmap")}</span></li>
                     </ul>
                   </div>
-                  <div className="flex-1 bg-white border border-stone-300 p-5 flex flex-col overflow-hidden">
-                    <h3 className="font-mono text-xs uppercase tracking-widest text-stone-500 mb-4 shrink-0 leading-none">
+                  <div className="flex-1 bg-white border border-stone-300 p-4 flex flex-col overflow-hidden">
+                    <h3 className="font-mono text-[10px] uppercase tracking-widest text-stone-500 mb-2 shrink-0 leading-none">
                       {t("Key Resources", "Sumber Daya Utama")}
                     </h3>
-                    <ul className="text-sm text-stone-800 font-medium space-y-2 flex-1 overflow-y-auto">
-                      <li className="flex items-start gap-2"><span className="text-[#4a5d23] mt-0.5">●</span> <span>{t("Proprietary CycleGAN", "Model CycleGAN Kepemilikan")}</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#4a5d23] mt-0.5">●</span> <span>{t("Visual Datasets", "Dataset Visual")}</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#4a5d23] mt-0.5">●</span> <span>{t("Compute Infrastructure", "Infrastruktur Komputasi")}</span></li>
+                    <ul className="text-xs text-stone-800 font-medium space-y-1.5 flex-1 overflow-hidden">
+                      <li className="flex items-start gap-1.5"><span className="text-[#4a5d23] mt-0.5">●</span> <span>{t("Proprietary CycleGAN", "Model CycleGAN Kepemilikan")}</span></li>
+                      <li className="flex items-start gap-1.5"><span className="text-[#4a5d23] mt-0.5">●</span> <span>{t("Visual Datasets", "Dataset Visual")}</span></li>
+                      <li className="flex items-start gap-1.5"><span className="text-[#4a5d23] mt-0.5">●</span> <span>{t("Compute Infrastructure", "Infrastruktur Komputasi")}</span></li>
                     </ul>
                   </div>
                 </div>
 
                 {/* Value Propositions */}
-                <div className="flex-[1.2] bg-[#4a5d23] border border-[#5f7434] p-5 flex flex-col text-white overflow-hidden">
-                  <h3 className="font-mono text-xs uppercase tracking-widest text-[#a3b87a] mb-4 shrink-0 leading-none">
+                <div className="flex-[1.2] bg-[#4a5d23] border border-[#5f7434] p-4 flex flex-col text-white overflow-hidden">
+                  <h3 className="font-mono text-xs uppercase tracking-widest text-[#a3b87a] mb-3 shrink-0 leading-none">
                     {t("Value Propositions", "Nilai Proporsi")}
                   </h3>
-                  <div className="flex-1 flex flex-col justify-center space-y-2">
+                  <div className="flex-1 flex flex-col justify-center space-y-6">
                     <div>
-                      <div className="font-bold text-[#c2d49a] mb-1">{t("Hardware Agnostic", "Tanpa Batasan Hardware")}</div>
-                      <p className="text-sm text-stone-200 font-light leading-snug">{t("Accessible via any commercial consumer RGB drone. No need for $10k multispectral setups.", "Dapat diakses dengan drone RGB komersial biasa. Tidak butuh perangkat multispektral mahal.")}</p>
+                      <div className="font-bold text-[#c2d49a] mb-0.5 text-sm">{t("Hardware Agnostic", "Tanpa Batasan Hardware")}</div>
+                      <p className="text-[11px] text-stone-200 font-light leading-snug">{t("Accessible via any commercial consumer RGB drone. No need for $10k multispectral setups.", "Dapat diakses dengan drone RGB komersial biasa. Tidak butuh perangkat multispektral mahal.")}</p>
                     </div>
                     <div>
-                      <div className="font-bold text-[#c2d49a] mb-1">{t("Early Detection", "Deteksi Dini")}</div>
-                      <p className="text-sm text-stone-200 font-light leading-snug">{t("Spot Ganoderma signs before visual symptoms to prevent devastating spread.", "Deteksi tanda awal Ganoderma sebelum gejala visual terlihat untuk mencegah penyebaran.")}</p>
+                      <div className="font-bold text-[#c2d49a] mb-0.5 text-sm">{t("Early Detection", "Deteksi Dini")}</div>
+                      <p className="text-[11px] text-stone-200 font-light leading-snug">{t("Spot Ganoderma signs before visual symptoms to prevent devastating spread.", "Deteksi tanda awal Ganoderma sebelum gejala visual terlihat untuk mencegah penyebaran.")}</p>
                     </div>
                     <div>
-                      <div className="font-bold text-[#c2d49a] mb-1">{t("Bankable Data", "Data Terpercaya")}</div>
-                      <p className="text-sm text-stone-200 font-light leading-snug">{t("Precise PDF reports directly aiding PSR replanting fund applications.", "Laporan PDF presisi yang langsung membantu pengajuan dana peremajaan PSR.")}</p>
+                      <div className="font-bold text-[#c2d49a] mb-0.5 text-sm">{t("Bankable Data", "Data Terpercaya")}</div>
+                      <p className="text-[11px] text-stone-200 font-light leading-snug">{t("Precise PDF reports directly aiding PSR replanting fund applications.", "Laporan PDF presisi langsung membantu pengajuan dana PSR.")}</p>
                     </div>
                   </div>
                 </div>
 
                 {/* Customer Relationships & Channels */}
                 <div className="flex-1 flex flex-col gap-4 min-h-0">
-                  <div className="flex-1 bg-white border border-stone-300 p-5 flex flex-col overflow-hidden">
-                    <h3 className="font-mono text-xs uppercase tracking-widest text-stone-500 mb-4 shrink-0 leading-none">
+                  <div className="flex-1 bg-white border border-stone-300 p-4 flex flex-col overflow-hidden">
+                    <h3 className="font-mono text-[10px] uppercase tracking-widest text-stone-500 mb-2 shrink-0 leading-none">
                       {t("Customer Relationships", "Hubungan Pelanggan")}
                     </h3>
-                    <ul className="text-sm text-stone-800 font-medium space-y-2 flex-1 overflow-y-auto">
-                      <li className="flex items-start gap-2"><span className="text-[#8b5a2b] mt-0.5">●</span> <span>{t("Self-serve Portal", "Portal Mandiri")}</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#8b5a2b] mt-0.5">●</span> <span>{t("KUD Dedicated Support", "Dukungan Khusus KUD")}</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#8b5a2b] mt-0.5">●</span> <span>{t("B2B Enterprise Integration", "Integrasi B2B Perusahaan")}</span></li>
+                    <ul className="text-xs text-stone-800 font-medium space-y-1.5 flex-1 overflow-hidden">
+                      <li className="flex items-start gap-1.5"><span className="text-[#8b5a2b] mt-0.5">●</span> <span>{t("Self-serve Portal", "Portal Mandiri")}</span></li>
+                      <li className="flex items-start gap-1.5"><span className="text-[#8b5a2b] mt-0.5">●</span> <span>{t("KUD Dedicated Support", "Dukungan Khusus KUD")}</span></li>
+                      <li className="flex items-start gap-1.5"><span className="text-[#8b5a2b] mt-0.5">●</span> <span>{t("B2B Enterprise Integration", "Integrasi B2B Perusahaan")}</span></li>
                     </ul>
                   </div>
-                  <div className="flex-1 bg-white border border-stone-300 p-5 flex flex-col overflow-hidden">
-                    <h3 className="font-mono text-xs uppercase tracking-widest text-stone-500 mb-4 shrink-0 leading-none">
+                  <div className="flex-1 bg-white border border-stone-300 p-4 flex flex-col overflow-hidden">
+                    <h3 className="font-mono text-[10px] uppercase tracking-widest text-stone-500 mb-2 shrink-0 leading-none">
                       {t("Channels", "Saluran")}
                     </h3>
-                    <ul className="text-sm text-stone-800 font-medium space-y-2 flex-1 overflow-y-auto">
-                      <li className="flex items-start gap-2"><span className="text-[#8b5a2b] mt-0.5">●</span> <span>{t("Co-op Direct Sales", "Penjualan Langsung Koperasi")}</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#8b5a2b] mt-0.5">●</span> <span>{t("WhatsApp / Telegram Groups", "Grup WhatsApp / Telegram")}</span></li>
-                      <li className="flex items-start gap-2"><span className="text-[#8b5a2b] mt-0.5">●</span> <span>{t("Agritech Expos", "Pameran Agritech")}</span></li>
+                    <ul className="text-xs text-stone-800 font-medium space-y-1.5 flex-1 overflow-hidden">
+                      <li className="flex items-start gap-1.5"><span className="text-[#8b5a2b] mt-0.5">●</span> <span>{t("Co-op Direct Sales", "Penjualan Langsung Koperasi")}</span></li>
+                      <li className="flex items-start gap-1.5"><span className="text-[#8b5a2b] mt-0.5">●</span> <span>{t("WhatsApp / Telegram Groups", "Grup WhatsApp / Telegram")}</span></li>
+                      <li className="flex items-start gap-1.5"><span className="text-[#8b5a2b] mt-0.5">●</span> <span>{t("Agritech Expos", "Pameran Agritech")}</span></li>
                     </ul>
                   </div>
                 </div>
 
                 {/* Customer Segments */}
-                <div className="flex-1 bg-[#f4f1ea] border border-stone-300 p-5 flex flex-col overflow-hidden">
-                  <h3 className="font-mono text-xs uppercase tracking-widest text-stone-500 mb-4 shrink-0 leading-none">
+                <div className="flex-1 bg-[#f4f1ea] border border-stone-300 p-4 flex flex-col overflow-hidden">
+                  <h3 className="font-mono text-xs uppercase tracking-widest text-stone-500 mb-3 shrink-0 leading-none">
                     {t("Customer Segments", "Segmen Pelanggan")}
                   </h3>
-                  <div className="space-y-4 flex-1 overflow-y-auto">
+                  <div className="space-y-3 flex-1 overflow-hidden">
                     <div>
-                      <div className="font-bold text-stone-900 mb-1">{t("Independent Farmers", "Petani Mandiri")}</div>
-                      <p className="text-xs text-stone-600 leading-snug">{t("Smallholders (2-10ha) seeking ad-hoc low-cost inspections.", "Petani kecil (2-10ha) yang mencari inspeksi biaya rendah ad-hoc.")}</p>
+                      <div className="font-bold text-stone-900 mb-0.5 text-sm">{t("Independent Farmers", "Petani Mandiri")}</div>
+                      <p className="text-[11px] text-stone-600 leading-snug">{t("Smallholders (2-10ha) seeking ad-hoc low-cost inspections.", "Petani kecil (2-10ha) mencari inspeksi murah ad-hoc.")}</p>
                     </div>
                     <div>
-                      <div className="font-bold text-stone-900 mb-1">{t("Palm Oil Cooperatives", "Koperasi Sawit (KUD)")}</div>
-                      <p className="text-xs text-stone-600 leading-snug">{t("Groups managing 100-500ha needing centralized monitoring.", "Grup yang mengelola 100-500ha butuh pemantauan terpusat.")}</p>
+                      <div className="font-bold text-stone-900 mb-0.5 text-sm">{t("Palm Oil Cooperatives", "Koperasi Sawit (KUD)")}</div>
+                      <p className="text-[11px] text-stone-600 leading-snug">{t("Groups managing 100-500ha needing centralized monitoring.", "Grup mengelola 100-500ha butuh pantauan terpusat.")}</p>
                     </div>
                     <div>
-                      <div className="font-bold text-stone-900 mb-1">{t("Enterprise Estates", "Perkebunan Perusahaan")}</div>
-                      <p className="text-xs text-stone-600 leading-snug">{t("Large operators (>5,000ha) needing API and automated pipelines.", "Operator besar (>5.000ha) yang butuh API dan alur kerja otomatis.")}</p>
+                      <div className="font-bold text-stone-900 mb-0.5 text-sm">{t("Enterprise Estates", "Perkebunan Perusahaan")}</div>
+                      <p className="text-[11px] text-stone-600 leading-snug">{t("Large operators (>5,000ha) needing API and automated pipelines.", "Operator besar (>5k ha) butuh otomatisasi.")}</p>
                     </div>
                   </div>
                 </div>
@@ -700,50 +700,50 @@ export default function App() {
               {/* BOTTOM ROW: 2 Columns */}
               <div className="flex-1 flex gap-4 min-h-0">
                 {/* Cost Structure */}
-                <div className="flex-1 bg-white border border-stone-300 p-5 flex flex-col justify-center">
-                  <h3 className="font-mono text-xs uppercase tracking-widest text-stone-500 mb-4 shrink-0 leading-none">
+                <div className="flex-1 bg-white border border-stone-300 p-4 flex flex-col justify-center overflow-hidden">
+                  <h3 className="font-mono text-xs uppercase tracking-widest text-stone-500 mb-2 shrink-0 leading-none">
                     {t("Cost Structure", "Struktur Biaya")}
                   </h3>
                   <div className="flex gap-4">
                     <div className="flex-1">
-                      <div className="text-2xl font-black text-stone-900 leading-none mb-1">
+                      <div className="text-xl font-black text-stone-900 leading-none mb-1">
                         {t("Cloud & Compute", "Cloud & Komputasi")}
                       </div>
-                      <div className="text-sm text-stone-600 font-light mt-1">
-                        {t("GPU instances for CycleGAN inference and map storage.", "Instans GPU untuk inferensi CycleGAN dan penyimpanan peta.")}
+                      <div className="text-[11px] text-stone-600 font-light mt-1">
+                        {t("GPU instances for CycleGAN inference and map storage.", "Instans GPU untuk inferensi CycleGAN dan data.")}
                       </div>
                     </div>
                     <div className="flex-1">
-                      <div className="text-2xl font-black text-stone-900 leading-none mb-1">
+                      <div className="text-xl font-black text-stone-900 leading-none mb-1">
                         {t("R&D / Staff", "Riset & Staf")}
                       </div>
-                      <div className="text-sm text-stone-600 font-light mt-1">
-                        {t("Continuous dataset curation and platform engineering.", "Kurasi dataset berkelanjutan dan rekayasa platform.")}
+                      <div className="text-[11px] text-stone-600 font-light mt-1">
+                        {t("Continuous dataset curation and platform engineering.", "Kurasi dataset konstan & rekayasa platform.")}
                       </div>
                     </div>
                   </div>
                 </div>
 
                 {/* Revenue Streams */}
-                <div className="flex-1 bg-white border border-stone-300 p-5 flex flex-col justify-center">
-                  <h3 className="font-mono text-xs uppercase tracking-widest text-stone-500 mb-4 shrink-0 leading-none">
+                <div className="flex-1 bg-white border border-stone-300 p-4 flex flex-col justify-center overflow-hidden">
+                  <h3 className="font-mono text-xs uppercase tracking-widest text-stone-500 mb-2 shrink-0 leading-none">
                     {t("Revenue Streams", "Aliran Pendapatan")}
                   </h3>
                   <div className="flex gap-4">
                     <div className="flex-1">
-                      <div className="text-2xl font-black text-[#4a5d23] leading-none mb-1">
+                      <div className="text-xl font-black text-[#4a5d23] leading-none mb-1">
                         {t("Subscription", "Langganan")}
                       </div>
-                      <div className="text-sm text-stone-600 font-light mt-1">
-                        {t("Rp 2.5m/mo per cooperative for up to 500ha combined coverage.", "Rp 2,5jt/bulan per koperasi untuk cakupan gabungan hingga 500ha.")}
+                      <div className="text-[11px] text-stone-600 font-light mt-1">
+                        {t("Rp 2.5m/mo per cooperative for up to 500ha combined coverage.", "Rp 2,5jt/bln per koperasi maks 500ha gabungan.")}
                       </div>
                     </div>
                     <div className="flex-1">
-                      <div className="text-2xl font-black text-[#4a5d23] leading-none mb-1">
+                      <div className="text-xl font-black text-[#4a5d23] leading-none mb-1">
                         {t("Pay-Per-Scan", "Bayar Per Pindai")}
                       </div>
-                      <div className="text-sm text-stone-600 font-light mt-1">
-                        {t("Rp 25k/ha for independent farmers generating ad-hoc PDF reports.", "Rp 25rb/ha untuk petani mandiri yang membuat laporan PDF ad-hoc.")}
+                      <div className="text-[11px] text-stone-600 font-light mt-1">
+                        {t("Rp 25k/ha for independent farmers generating ad-hoc PDF reports.", "Rp 25rb/ha u/ petani mandiri (laporan PDF ad-hoc).")}
                       </div>
                     </div>
                   </div>
