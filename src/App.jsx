@@ -25,6 +25,7 @@ const investorSlides = [
   { id: 'problem' },
   { id: 'solution' },
   { id: 'business_model' },
+  { id: 'credits' },
 ];
 
 const farmerSlides = [
@@ -33,6 +34,7 @@ const farmerSlides = [
   { id: 'solution_farmer' },
   { id: 'demo_farmer' },
   { id: 'value_farmer' },
+  { id: 'credits' },
 ];
 
 export default function App() {
@@ -805,6 +807,33 @@ export default function App() {
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+        );
+
+      case 'credits':
+        return (
+          <div className="flex flex-col h-full justify-center items-center p-12 bg-stone-900">
+            <h2 className="text-4xl font-black text-white tracking-tighter mb-16">
+              {t("the team.", "tim kami.")}
+            </h2>
+            <div className="grid grid-cols-2 max-w-4xl w-full gap-8">
+              {[
+                { id: "5054231011", name: "Muhammad Farhan Arya Wicaksono" },
+                { id: "5054231018", name: "Imam Muhammad Diponegoro" },
+                { id: "5054231013", name: "Faiz Muhammad Kautsar" },
+                { id: "5054231006", name: "Muhammad Naufal Arifin" }
+              ].map((member) => (
+                <div key={member.id} className="border border-stone-700 bg-stone-800 p-8 flex flex-col items-center justify-center text-center relative overflow-hidden group hover:border-[#a3b87a] transition-all">
+                  <div className="absolute top-0 left-0 w-full h-1 bg-[#4a5d23] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                  <span className="font-mono text-sm tracking-widest text-[#a3b87a] mb-2">{member.id}</span>
+                  <span className="text-xl font-bold text-stone-200">{member.name}</span>
+                </div>
+              ))}
+            </div>
+            <div className="mt-16 flex items-center justify-center gap-3 opacity-50">
+              <Leaf className="w-6 h-6 text-white" />
+              <span className="font-black text-xl tracking-tighter text-white">basalbuddy.</span>
             </div>
           </div>
         );
