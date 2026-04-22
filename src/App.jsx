@@ -12,6 +12,9 @@ import {
   Wind,
   Download,
   Loader2,
+  Check,
+  X,
+  Minus,
 } from 'lucide-react';
 import { domToJpeg } from 'modern-screenshot';
 import rgbPic from './assets/rgb-pic.png';
@@ -24,6 +27,7 @@ const investorSlides = [
   { id: 'title' },
   { id: 'problem' },
   { id: 'solution' },
+  { id: 'differential' },
   { id: 'market_validation' },
   { id: 'business_model' },
   { id: 'bmc' },
@@ -298,6 +302,179 @@ export default function App() {
                 </p>
                 <div className="mt-auto font-mono text-xs text-[#4a5d23] bg-[#c2d49a] p-3 shrink-0 leading-relaxed">
                   {t("// Targeted culling minimizes collateral yield loss.", "// Penebangan yang ditargetkan meminimalkan hilangnya hasil.")}
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+
+      case 'differential':
+        return (
+          <div className="h-full flex flex-col p-12 bg-white">
+            <div className="flex items-start justify-between mb-8 shrink-0">
+              <h2 className="text-5xl font-black text-stone-900 tracking-tighter leading-none">
+                {t("the differential.", "diferensiasi.")}
+              </h2>
+              <span
+                className="font-mono text-sm tracking-widest text-[#4a5d23] uppercase border border-[#4a5d23] px-3 py-1.5 shrink-0 whitespace-nowrap"
+                style={{ lineHeight: 1 }}
+              >
+                {t("Competitive Landscape", "Lanskap Kompetitif")}
+              </span>
+            </div>
+
+            <div className="flex-1 flex flex-col min-h-0">
+              {/* Table */}
+              <div className="flex-1 border border-stone-300 overflow-hidden flex flex-col">
+                {/* Header */}
+                <div className="flex bg-stone-900 text-white shrink-0">
+                  <div className="w-[22%] p-4 font-mono text-[10px] uppercase tracking-widest text-stone-400 leading-none flex items-center">
+                    {t("Dimension", "Dimensi")}
+                  </div>
+                  <div className="w-[19.5%] p-4 font-mono text-[10px] uppercase tracking-widest text-stone-400 leading-none flex items-center border-l border-stone-700">
+                    {t("Manual Scouting", "Inspeksi Manual")}
+                  </div>
+                  <div className="w-[19.5%] p-4 font-mono text-[10px] uppercase tracking-widest text-stone-400 leading-none flex items-center border-l border-stone-700">
+                    {t("Multispectral Drones", "Drone Multispektral")}
+                  </div>
+                  <div className="w-[19.5%] p-4 font-mono text-[10px] uppercase tracking-widest text-stone-400 leading-none flex items-center border-l border-stone-700">
+                    {t("Enterprise Platforms", "Platform Perusahaan")}
+                  </div>
+                  <div className="w-[19.5%] p-4 font-mono text-[10px] uppercase tracking-widest text-[#c2d49a] leading-none flex items-center border-l border-[#5f7434] bg-[#4a5d23]">
+                    basalbuddy.
+                  </div>
+                </div>
+
+                {/* Rows */}
+                {[
+                  {
+                    dim: t("Hardware Cost", "Biaya Perangkat"),
+                    vals: [
+                      { icon: 'check', label: t("None (foot patrol)", "Tidak ada (patroli kaki)") },
+                      { icon: 'x', label: t("$10k+ multispectral camera", "$10k+ kamera multispektral") },
+                      { icon: 'x', label: t("Custom fleet + sensors", "Armada + sensor khusus") },
+                      { icon: 'check', label: t("Any consumer RGB drone", "Drone konsumen RGB apa pun") },
+                    ],
+                  },
+                  {
+                    dim: t("Detection Timing", "Waktu Deteksi"),
+                    vals: [
+                      { icon: 'x', label: t("Late-stage only (>70% damage)", "Stadium akhir saja (>70% rusak)") },
+                      { icon: 'check', label: t("Early spectral anomalies", "Anomali spektral awal") },
+                      { icon: 'check', label: t("Early via NDVI/thermal", "Awal via NDVI/termal") },
+                      { icon: 'check', label: t("Early via AI-synthesized NIR", "Awal via NIR sintetis AI") },
+                    ],
+                  },
+                  {
+                    dim: t("Smallholder Access", "Akses Petani Kecil"),
+                    vals: [
+                      { icon: 'minus', label: t("Accessible but ineffective", "Terjangkau tapi tak efektif") },
+                      { icon: 'x', label: t("Priced out entirely", "Terlalu mahal sepenuhnya") },
+                      { icon: 'x', label: t("Enterprise contracts only", "Kontrak perusahaan saja") },
+                      { icon: 'check', label: t("Rp 25k/ha pay-as-you-go", "Rp 25rb/ha bayar per pakai") },
+                    ],
+                  },
+                  {
+                    dim: t("Ganoderma Specificity", "Spesifisitas Ganoderma"),
+                    vals: [
+                      { icon: 'x', label: t("Subjective visual guess", "Tebakan visual subjektif") },
+                      { icon: 'minus', label: t("General stress, not disease-specific", "Stres umum, bukan spesifik penyakit") },
+                      { icon: 'minus', label: t("Tree counting & health index", "Hitungan pohon & indeks kesehatan") },
+                      { icon: 'check', label: t("Trained on BSR canopy signatures", "Dilatih pada tanda kanopi BSR") },
+                    ],
+                  },
+                  {
+                    dim: t("Actionable Output", "Keluaran Aksi"),
+                    vals: [
+                      { icon: 'x', label: t("Mental notes / manual logs", "Catatan manual / ingatan") },
+                      { icon: 'minus', label: t("Raw spectral maps (needs expert)", "Peta spektral mentah (butuh ahli)") },
+                      { icon: 'check', label: t("Dashboard + analytics", "Dasbor + analitik") },
+                      { icon: 'check', label: t("Geo-tagged PDF + GeoTIFF", "PDF geo-tag + GeoTIFF") },
+                    ],
+                  },
+                ].map((row, ri) => (
+                  <div
+                    key={ri}
+                    className={`flex flex-1 min-h-0 ${
+                      ri % 2 === 0 ? 'bg-white' : 'bg-[#f9f8f6]'
+                    } border-t border-stone-200`}
+                  >
+                    <div className="w-[22%] p-4 flex items-center">
+                      <span className="font-bold text-sm text-stone-900 leading-snug">
+                        {row.dim}
+                      </span>
+                    </div>
+                    {row.vals.map((cell, ci) => {
+                      const isLast = ci === 3;
+                      return (
+                        <div
+                          key={ci}
+                          className={`w-[19.5%] p-4 flex items-start gap-2.5 border-l ${
+                            isLast
+                              ? 'border-[#d4dfc0] bg-[#f0f4e8]'
+                              : 'border-stone-200'
+                          }`}
+                        >
+                          <div className="shrink-0 mt-0.5">
+                            {cell.icon === 'check' && (
+                              <div className={`w-5 h-5 rounded-full flex items-center justify-center ${
+                                isLast ? 'bg-[#4a5d23]' : 'bg-emerald-600'
+                              }`}>
+                                <Check className="w-3 h-3 text-white" strokeWidth={3} />
+                              </div>
+                            )}
+                            {cell.icon === 'x' && (
+                              <div className="w-5 h-5 rounded-full bg-red-500 flex items-center justify-center">
+                                <X className="w-3 h-3 text-white" strokeWidth={3} />
+                              </div>
+                            )}
+                            {cell.icon === 'minus' && (
+                              <div className="w-5 h-5 rounded-full bg-amber-400 flex items-center justify-center">
+                                <Minus className="w-3 h-3 text-white" strokeWidth={3} />
+                              </div>
+                            )}
+                          </div>
+                          <span className={`text-xs leading-snug font-light ${
+                            isLast ? 'text-stone-800 font-medium' : 'text-stone-600'
+                          }`}>
+                            {cell.label}
+                          </span>
+                        </div>
+                      );
+                    })}
+                  </div>
+                ))}
+              </div>
+
+              {/* Bottom callout */}
+              <div className="mt-4 flex gap-6 shrink-0">
+                <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-1.5">
+                    <div className="w-3.5 h-3.5 rounded-full bg-emerald-600" />
+                    <span className="font-mono text-[10px] text-stone-500 uppercase tracking-widest leading-none">
+                      {t("Advantage", "Keunggulan")}
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <div className="w-3.5 h-3.5 rounded-full bg-amber-400" />
+                    <span className="font-mono text-[10px] text-stone-500 uppercase tracking-widest leading-none">
+                      {t("Partial", "Sebagian")}
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <div className="w-3.5 h-3.5 rounded-full bg-red-500" />
+                    <span className="font-mono text-[10px] text-stone-500 uppercase tracking-widest leading-none">
+                      {t("Disadvantage", "Kerugian")}
+                    </span>
+                  </div>
+                </div>
+                <div className="flex-1 bg-[#f4f1ea] border border-stone-300 px-5 py-3 flex items-center">
+                  <span className="text-sm text-stone-700 font-light leading-snug">
+                    {t(
+                      "Basalbuddy is the only solution combining early detection accuracy with smallholder-accessible pricing and hardware requirements.",
+                      "Basalbuddy adalah satu-satunya solusi yang menggabungkan akurasi deteksi dini dengan harga dan persyaratan perangkat keras yang dapat dijangkau petani kecil."
+                    )}
+                  </span>
                 </div>
               </div>
             </div>
