@@ -328,19 +328,22 @@ export default function App() {
               <div className="flex-1 border border-stone-300 overflow-hidden flex flex-col">
                 {/* Header */}
                 <div className="flex bg-stone-900 text-white shrink-0">
-                  <div className="w-[22%] p-4 font-mono text-[10px] uppercase tracking-widest text-stone-400 leading-none flex items-center">
+                  <div className="w-[18%] p-3 font-mono text-[9px] uppercase tracking-widest text-stone-400 leading-none flex items-center">
                     {t("Dimension", "Dimensi")}
                   </div>
-                  <div className="w-[19.5%] p-4 font-mono text-[10px] uppercase tracking-widest text-stone-400 leading-none flex items-center border-l border-stone-700">
+                  <div className="w-[13.2%] p-3 font-mono text-[9px] uppercase tracking-widest text-stone-400 leading-none flex items-center border-l border-stone-700">
                     {t("Manual Scouting", "Inspeksi Manual")}
                   </div>
-                  <div className="w-[19.5%] p-4 font-mono text-[10px] uppercase tracking-widest text-stone-400 leading-none flex items-center border-l border-stone-700">
+                  <div className="w-[13.2%] p-3 font-mono text-[9px] uppercase tracking-widest text-stone-400 leading-none flex items-center border-l border-stone-700">
                     {t("Multispectral Drones", "Drone Multispektral")}
                   </div>
-                  <div className="w-[19.5%] p-4 font-mono text-[10px] uppercase tracking-widest text-stone-400 leading-none flex items-center border-l border-stone-700">
-                    {t("Enterprise Platforms", "Platform Perusahaan")}
+                  <div className="w-[13.2%] p-3 font-mono text-[9px] uppercase tracking-widest text-stone-400 leading-none flex items-center border-l border-stone-700">
+                    {t("Enterprise Platforms", "Platform Enterprise")}
                   </div>
-                  <div className="w-[19.5%] p-4 font-mono text-[10px] uppercase tracking-widest text-[#c2d49a] leading-none flex items-center border-l border-[#5f7434] bg-[#4a5d23]">
+                  <div className="w-[13.2%] p-3 font-mono text-[9px] uppercase tracking-widest text-stone-400 leading-none flex items-center border-l border-stone-700">
+                    {t("Resistant Seedlings", "Bibit Toleran")}
+                  </div>
+                  <div className="w-[29.2%] p-3 font-mono text-[9px] uppercase tracking-widest text-[#c2d49a] leading-none flex items-center border-l border-[#5f7434] bg-[#4a5d23]">
                     basalbuddy.
                   </div>
                 </div>
@@ -350,45 +353,50 @@ export default function App() {
                   {
                     dim: t("Hardware Cost", "Biaya Perangkat"),
                     vals: [
-                      { icon: 'check', label: t("None (foot patrol)", "Tidak ada (patroli kaki)") },
-                      { icon: 'x', label: t("$10k+ multispectral camera", "$10k+ kamera multispektral") },
-                      { icon: 'x', label: t("Custom fleet + sensors", "Armada + sensor khusus") },
+                      { icon: 'check', label: t("None (foot patrol)", "Tidak ada (patroli kaki)"), sup: '1' },
+                      { icon: 'x', label: t("$10k+ camera", "$10k+ kamera"), sup: '3' },
+                      { icon: 'x', label: t("Custom fleet + sensors", "Armada + sensor"), sup: '4' },
+                      { icon: 'minus', label: t("Seed cost only, but replanting needed", "Biaya bibit saja, tapi perlu tanam ulang"), sup: '6,7,8' },
                       { icon: 'check', label: t("Any consumer RGB drone", "Drone konsumen RGB apa pun") },
                     ],
                   },
                   {
                     dim: t("Detection Timing", "Waktu Deteksi"),
                     vals: [
-                      { icon: 'x', label: t("Late-stage only (>70% damage)", "Stadium akhir saja (>70% rusak)") },
-                      { icon: 'check', label: t("Early spectral anomalies", "Anomali spektral awal") },
-                      { icon: 'check', label: t("Early via NDVI/thermal", "Awal via NDVI/termal") },
+                      { icon: 'x', label: t("Late-stage only (>70% dmg)", "Stadium akhir (>70% rusak)"), sup: '1,2' },
+                      { icon: 'check', label: t("Early spectral anomalies", "Anomali spektral awal"), sup: '3' },
+                      { icon: 'check', label: t("Early via NDVI/thermal", "Awal via NDVI/termal"), sup: '4' },
+                      { icon: 'x', label: t("Prevention, not detection", "Pencegahan, bukan deteksi"), sup: '6,7,8' },
                       { icon: 'check', label: t("Early via AI-synthesized NIR", "Awal via NIR sintetis AI") },
                     ],
                   },
                   {
                     dim: t("Smallholder Access", "Akses Petani Kecil"),
                     vals: [
-                      { icon: 'minus', label: t("Accessible but ineffective", "Terjangkau tapi tak efektif") },
-                      { icon: 'x', label: t("Priced out entirely", "Terlalu mahal sepenuhnya") },
-                      { icon: 'x', label: t("Enterprise contracts only", "Kontrak perusahaan saja") },
+                      { icon: 'minus', label: t("Accessible but ineffective", "Terjangkau tapi tak efektif"), sup: '1' },
+                      { icon: 'x', label: t("Priced out entirely", "Terlalu mahal"), sup: '3' },
+                      { icon: 'x', label: t("Enterprise contracts only", "Kontrak enterprise saja"), sup: '4,5' },
+                      { icon: 'minus', label: t("Available via replanting programs", "Tersedia via program peremajaan"), sup: '6,7,8' },
                       { icon: 'check', label: t("Rp 25k/ha pay-as-you-go", "Rp 25rb/ha bayar per pakai") },
                     ],
                   },
                   {
                     dim: t("Ganoderma Specificity", "Spesifisitas Ganoderma"),
                     vals: [
-                      { icon: 'x', label: t("Subjective visual guess", "Tebakan visual subjektif") },
-                      { icon: 'minus', label: t("General stress, not disease-specific", "Stres umum, bukan spesifik penyakit") },
-                      { icon: 'minus', label: t("Tree counting & health index", "Hitungan pohon & indeks kesehatan") },
+                      { icon: 'x', label: t("Subjective visual guess", "Tebakan visual subjektif"), sup: '2' },
+                      { icon: 'minus', label: t("General stress, not disease-specific", "Stres umum, bukan spesifik"), sup: '3' },
+                      { icon: 'minus', label: t("Tree counting & health index", "Hitung pohon & indeks"), sup: '5' },
+                      { icon: 'minus', label: t("Tolerant, not immune (still gets BSR)", "Toleran, bukan kebal (tetap kena BSR)"), sup: '6,7,8' },
                       { icon: 'check', label: t("Trained on BSR canopy signatures", "Dilatih pada tanda kanopi BSR") },
                     ],
                   },
                   {
                     dim: t("Actionable Output", "Keluaran Aksi"),
                     vals: [
-                      { icon: 'x', label: t("Mental notes / manual logs", "Catatan manual / ingatan") },
-                      { icon: 'minus', label: t("Raw spectral maps (needs expert)", "Peta spektral mentah (butuh ahli)") },
-                      { icon: 'check', label: t("Dashboard + analytics", "Dasbor + analitik") },
+                      { icon: 'x', label: t("Mental notes / manual logs", "Catatan manual"), sup: '1' },
+                      { icon: 'minus', label: t("Raw spectral maps (needs expert)", "Peta spektral (butuh ahli)"), sup: '3' },
+                      { icon: 'check', label: t("Dashboard + analytics", "Dasbor + analitik"), sup: '4' },
+                      { icon: 'x', label: t("No monitoring output", "Tanpa keluaran pemantauan"), sup: '6,7,8' },
                       { icon: 'check', label: t("Geo-tagged PDF + GeoTIFF", "PDF geo-tag + GeoTIFF") },
                     ],
                   },
@@ -399,17 +407,17 @@ export default function App() {
                       ri % 2 === 0 ? 'bg-white' : 'bg-[#f9f8f6]'
                     } border-t border-stone-200`}
                   >
-                    <div className="w-[22%] p-4 flex items-center">
-                      <span className="font-bold text-sm text-stone-900 leading-snug">
+                    <div className="w-[18%] p-3 flex items-center">
+                      <span className="font-bold text-[11px] text-stone-900 leading-snug">
                         {row.dim}
                       </span>
                     </div>
                     {row.vals.map((cell, ci) => {
-                      const isLast = ci === 3;
+                      const isLast = ci === 4;
                       return (
                         <div
                           key={ci}
-                          className={`w-[19.5%] p-4 flex items-start gap-2.5 border-l ${
+                          className={`${isLast ? 'w-[29.2%]' : 'w-[13.2%]'} p-3 flex items-start gap-2 border-l ${
                             isLast
                               ? 'border-[#d4dfc0] bg-[#f0f4e8]'
                               : 'border-stone-200'
@@ -417,27 +425,30 @@ export default function App() {
                         >
                           <div className="shrink-0 mt-0.5">
                             {cell.icon === 'check' && (
-                              <div className={`w-5 h-5 rounded-full flex items-center justify-center ${
+                              <div className={`w-4 h-4 rounded-full flex items-center justify-center ${
                                 isLast ? 'bg-[#4a5d23]' : 'bg-emerald-600'
                               }`}>
-                                <Check className="w-3 h-3 text-white" strokeWidth={3} />
+                                <Check className="w-2.5 h-2.5 text-white" strokeWidth={3} />
                               </div>
                             )}
                             {cell.icon === 'x' && (
-                              <div className="w-5 h-5 rounded-full bg-red-500 flex items-center justify-center">
-                                <X className="w-3 h-3 text-white" strokeWidth={3} />
+                              <div className="w-4 h-4 rounded-full bg-red-500 flex items-center justify-center">
+                                <X className="w-2.5 h-2.5 text-white" strokeWidth={3} />
                               </div>
                             )}
                             {cell.icon === 'minus' && (
-                              <div className="w-5 h-5 rounded-full bg-amber-400 flex items-center justify-center">
-                                <Minus className="w-3 h-3 text-white" strokeWidth={3} />
+                              <div className="w-4 h-4 rounded-full bg-amber-400 flex items-center justify-center">
+                                <Minus className="w-2.5 h-2.5 text-white" strokeWidth={3} />
                               </div>
                             )}
                           </div>
-                          <span className={`text-xs leading-snug font-light ${
+                          <span className={`text-[10px] leading-snug font-light ${
                             isLast ? 'text-stone-800 font-medium' : 'text-stone-600'
                           }`}>
                             {cell.label}
+                            {cell.sup && (
+                              <sup className="text-[7px] text-stone-400 ml-0.5 font-mono">{cell.sup}</sup>
+                            )}
                           </span>
                         </div>
                       );
@@ -447,35 +458,49 @@ export default function App() {
               </div>
 
               {/* Bottom callout */}
-              <div className="mt-4 flex gap-6 shrink-0">
+              <div className="mt-2 flex gap-4 shrink-0">
                 <div className="flex items-center gap-3">
-                  <div className="flex items-center gap-1.5">
-                    <div className="w-3.5 h-3.5 rounded-full bg-emerald-600" />
-                    <span className="font-mono text-[10px] text-stone-500 uppercase tracking-widest leading-none">
+                  <div className="flex items-center gap-1">
+                    <div className="w-3 h-3 rounded-full bg-emerald-600" />
+                    <span className="font-mono text-[9px] text-stone-500 uppercase tracking-widest leading-none">
                       {t("Advantage", "Keunggulan")}
                     </span>
                   </div>
-                  <div className="flex items-center gap-1.5">
-                    <div className="w-3.5 h-3.5 rounded-full bg-amber-400" />
-                    <span className="font-mono text-[10px] text-stone-500 uppercase tracking-widest leading-none">
+                  <div className="flex items-center gap-1">
+                    <div className="w-3 h-3 rounded-full bg-amber-400" />
+                    <span className="font-mono text-[9px] text-stone-500 uppercase tracking-widest leading-none">
                       {t("Partial", "Sebagian")}
                     </span>
                   </div>
-                  <div className="flex items-center gap-1.5">
-                    <div className="w-3.5 h-3.5 rounded-full bg-red-500" />
-                    <span className="font-mono text-[10px] text-stone-500 uppercase tracking-widest leading-none">
+                  <div className="flex items-center gap-1">
+                    <div className="w-3 h-3 rounded-full bg-red-500" />
+                    <span className="font-mono text-[9px] text-stone-500 uppercase tracking-widest leading-none">
                       {t("Disadvantage", "Kerugian")}
                     </span>
                   </div>
                 </div>
-                <div className="flex-1 bg-[#f4f1ea] border border-stone-300 px-5 py-3 flex items-center">
-                  <span className="text-sm text-stone-700 font-light leading-snug">
+                <div className="flex-1 bg-[#f4f1ea] border border-stone-300 px-4 py-2 flex items-center">
+                  <span className="text-[11px] text-stone-700 font-light leading-snug">
                     {t(
-                      "Basalbuddy is the only solution combining early detection accuracy with smallholder-accessible pricing and hardware requirements.",
-                      "Basalbuddy adalah satu-satunya solusi yang menggabungkan akurasi deteksi dini dengan harga dan persyaratan perangkat keras yang dapat dijangkau petani kecil."
+                      "Every existing approach forces a tradeoff between detection accuracy and farmer accessibility, basalbuddy eliminates it.",
+                      "Setiap pendekatan yang ada memaksa kompromi antara akurasi deteksi dan keterjangkauan petani, basalbuddy menghilangkannya."
                     )}
                   </span>
                 </div>
+              </div>
+
+              {/* Footnote sources */}
+              <div className="mt-1.5 shrink-0">
+                <p className="text-[7px] text-stone-400 font-mono leading-relaxed tracking-wide">
+                  <sup>1</sup> Liaghat et al., "Early Detection of Ganoderma in Oil Palm," J. Food, Agric. & Environ., 2014 &nbsp;
+                  <sup>2</sup> Khaled et al., "Detection of BSR Disease in Oil Palm," Int. J. of Agric. & Biol., NIH/PMC &nbsp;
+                  <sup>3</sup> Ahmadi et al., "Multispectral Remote Sensing for Disease Detection in Palms," IntechOpen, 2017 &nbsp;
+                  <sup>4</sup> Terra Agri (prev. Avirtech), terra-drone.net &nbsp;
+                  <sup>5</sup> Garuda Robotics, "Plantation 4.0," garuda.io &nbsp;
+                  <sup>6</sup> Socfindo, "DxP MT Gano," socfindo.co.id, 2013 &nbsp;
+                  <sup>7</sup> Golden Agri-Resources, "GAR Seeds," goldenagri.com.sg &nbsp;
+                  <sup>8</sup> Astra Agro Lestari, "DxP AAL Nirmala/Lestari/Sejahtera MRG," astra-agro.co.id, 2025
+                </p>
               </div>
             </div>
           </div>
