@@ -22,6 +22,8 @@ import nirTranslation from './assets/nir-translation.png';
 import sickLocated from './assets/sick-located.png';
 import yesGanoderma from './assets/yes-ganoderma.png';
 import noGanoderma from './assets/no-ganoderma.png';
+import stpSegmentation from './assets/stp-segmentation.png';
+import marketingMix4p from './assets/marketing-mix-4p.png';
 
 const investorSlides = [
   { id: 'title' },
@@ -29,6 +31,8 @@ const investorSlides = [
   { id: 'solution' },
   { id: 'differential' },
   { id: 'market_validation' },
+  { id: 'marketing_stp' },
+  { id: 'marketing_4p' },
   { id: 'business_model' },
   { id: 'bmc' },
   { id: 'credits' },
@@ -586,6 +590,174 @@ export default function App() {
                      <span className="text-xl font-medium text-white">{t("Interest in Early Detection Mapping", "Tertarik dengan Pemetaan Deteksi Dini")}</span>
                      <span className="text-3xl font-black text-[#c2d49a]">~83%</span>
                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+
+      case 'marketing_stp':
+        return (
+          <div className="h-full flex flex-col p-10 bg-white">
+            <div className="flex items-start justify-between mb-6 shrink-0">
+              <h2 className="text-5xl font-black text-stone-900 tracking-tighter leading-none">
+                {t("who we serve.", "siapa yang kami layani.")}
+              </h2>
+              <span
+                className="font-mono text-sm tracking-widest text-[#8b5a2b] uppercase border border-[#8b5a2b] px-3 py-1.5 shrink-0 whitespace-nowrap"
+                style={{ lineHeight: 1 }}
+              >
+                {t("Marketing Management", "Manajemen Pemasaran")}
+              </span>
+            </div>
+
+            <div className="flex gap-6 flex-1 min-h-0">
+              {/* LEFT: STP cards */}
+              <div className="w-[55%] flex flex-col gap-3 h-full min-h-0">
+                {/* Segmentation */}
+                <div className="flex-1 border-l-4 border-[#8b5a2b] bg-[#f4f1ea] p-4 flex flex-col min-h-0 overflow-hidden">
+                  <div className="flex items-center gap-2 mb-2 shrink-0">
+                    <div className="w-6 h-6 rounded-full bg-[#8b5a2b] text-white flex items-center justify-center text-[10px] font-bold shrink-0">S</div>
+                    <h4 className="font-bold text-xl text-stone-900 tracking-tight leading-none">
+                      {t("Segmentation", "Segmentasi")}
+                    </h4>
+                  </div>
+                  <ul className="text-sm text-stone-600 font-light space-y-1.5 flex-1 overflow-hidden">
+                    <li className="flex items-start gap-2"><span className="text-[#8b5a2b] mt-0.5">●</span> <span>{t("By farm size: smallholder (2-10ha), cooperative (100-500ha), enterprise (>5,000ha)", "Berdasarkan luas lahan: petani kecil (2-10ha), koperasi (100-500ha), perusahaan (>5.000ha)")}</span></li>
+                    <li className="flex items-start gap-2"><span className="text-[#8b5a2b] mt-0.5">●</span> <span>{t("By tech adoption: drone-ready vs. manual-only growers", "Berdasarkan adopsi teknologi: siap drone vs. manual saja")}</span></li>
+                    <li className="flex items-start gap-2"><span className="text-[#8b5a2b] mt-0.5">●</span> <span>{t("By geography: Ganoderma-endemic regions (Sumatra, Kalimantan)", "Berdasarkan geografi: wilayah endemik Ganoderma (Sumatera, Kalimantan)")}</span></li>
+                  </ul>
+                </div>
+
+                {/* Targeting */}
+                <div className="flex-1 border-l-4 border-[#4a5d23] bg-white border border-stone-300 p-4 flex flex-col min-h-0 overflow-hidden">
+                  <div className="flex items-center gap-2 mb-2 shrink-0">
+                    <div className="w-6 h-6 rounded-full bg-[#4a5d23] text-white flex items-center justify-center text-[10px] font-bold shrink-0">T</div>
+                    <h4 className="font-bold text-xl text-stone-900 tracking-tight leading-none">
+                      {t("Targeting", "Target")}
+                    </h4>
+                  </div>
+                  <p className="text-sm text-stone-600 font-light leading-relaxed flex-1 overflow-hidden">
+                    {t("Primary: palm oil cooperatives (KUD) managing 100-500ha in endemic zones—high pain, collective buying power. Secondary: independent smallholders via pay-per-scan.", "Primer: koperasi sawit (KUD) mengelola 100-500ha di zona endemik—masalah besar, daya beli kolektif. Sekunder: petani mandiri via bayar per pindai.")}
+                  </p>
+                </div>
+
+                {/* Positioning */}
+                <div className="flex-1 border-l-4 border-stone-900 bg-stone-900 p-4 flex flex-col text-white min-h-0 overflow-hidden">
+                  <div className="flex items-center gap-2 mb-2 shrink-0">
+                    <div className="w-6 h-6 rounded-full bg-white text-stone-900 flex items-center justify-center text-[10px] font-bold shrink-0">P</div>
+                    <h4 className="font-bold text-xl text-white tracking-tight leading-none">
+                      {t("Positioning", "Posisi")}
+                    </h4>
+                  </div>
+                  <p className="text-sm text-stone-300 font-light leading-relaxed italic flex-1 overflow-hidden">
+                    {t('"The affordable, AI-powered early warning system that makes precision agriculture accessible to every palm farmer—not just large estates."', '"Sistem peringatan dini bertenaga AI yang terjangkau—membuat pertanian presisi dapat diakses semua petani sawit, bukan hanya perusahaan besar."')}
+                  </p>
+                </div>
+              </div>
+
+              {/* RIGHT: Illustration */}
+              <div className="w-[45%] flex flex-col h-full gap-4 min-h-0">
+                <div className="flex-1 border border-stone-300 overflow-hidden relative bg-stone-50">
+                  <img src={stpSegmentation} alt="Market Segmentation" className="absolute inset-0 w-full h-full object-cover" />
+                </div>
+                <div className="bg-[#f4f1ea] border border-stone-300 p-4 shrink-0">
+                  <h3 className="font-mono text-xs uppercase tracking-widest text-stone-500 mb-1.5 leading-none">
+                    {t("STP Framework", "Kerangka STP")}
+                  </h3>
+                  <p className="text-sm text-stone-600 font-light leading-snug">
+                    {t("Segmentation, Targeting, and Positioning — how we identify the right farmers to reach, and where basalbuddy sits in their minds.", "Segmentasi, Targeting, dan Positioning — bagaimana kami mengidentifikasi petani yang tepat dan di mana basalbuddy berada di benak mereka.")}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+
+      case 'marketing_4p':
+        return (
+          <div className="h-full flex flex-col p-12 bg-[#f4f1ea]">
+            <div className="flex items-start justify-between mb-8 shrink-0">
+              <h2 className="text-5xl font-black text-stone-900 tracking-tighter leading-none">
+                {t("the mix.", "bauran pemasaran.")}
+              </h2>
+              <span
+                className="font-mono text-sm tracking-widest text-[#4a5d23] uppercase border border-[#4a5d23] px-3 py-1.5 shrink-0 whitespace-nowrap"
+                style={{ lineHeight: 1 }}
+              >
+                {t("4P Marketing Mix", "Konsep 4P (Marketing Mix)")}
+              </span>
+            </div>
+
+            <div className="flex gap-8 flex-1 min-h-0">
+              {/* LEFT: Illustration */}
+              <div className="w-[35%] flex flex-col h-full gap-5">
+                <div className="flex-1 border border-stone-300 overflow-hidden relative bg-stone-50">
+                  <img src={marketingMix4p} alt="Marketing Mix 4P" className="absolute inset-0 w-full h-full object-cover" />
+                </div>
+                <div className="bg-stone-900 p-5 shrink-0">
+                  <p className="text-sm text-stone-300 font-light leading-relaxed italic">
+                    {t("Product, Price, Place, and Promotion — the four levers we pull to reach and convert our target segments.", "Produk, Harga, Tempat, dan Promosi — empat aspek strategi untuk menjangkau dan mengonversi segmen target kami.")}
+                  </p>
+                </div>
+              </div>
+
+              {/* RIGHT: 4P Grid */}
+              <div className="w-[65%] flex flex-col gap-5 h-full">
+                <div className="flex gap-5 flex-1 min-h-0">
+                  {/* Product */}
+                  <div className="flex-1 bg-white border border-stone-300 p-6 flex flex-col">
+                    <div className="text-[#4a5d23] font-mono text-xl mb-4 border-b border-stone-200 pb-2 shrink-0 leading-none">
+                      {t("Product", "Produk")}
+                    </div>
+                    <ul className="text-sm text-stone-600 font-light space-y-2.5 flex-1">
+                      <li className="flex items-start gap-2"><span className="text-[#4a5d23] mt-0.5">●</span> <span>{t("SaaS platform for canopy health mapping", "Platform SaaS untuk pemetaan kesehatan kanopi")}</span></li>
+                      <li className="flex items-start gap-2"><span className="text-[#4a5d23] mt-0.5">●</span> <span>{t("AI-generated NIR + Ganoderma heatmaps", "Heatmap NIR + Ganoderma hasil AI")}</span></li>
+                      <li className="flex items-start gap-2"><span className="text-[#4a5d23] mt-0.5">●</span> <span>{t("Geo-tagged PDF & GeoTIFF reports", "Laporan PDF & GeoTIFF ber-geo-tag")}</span></li>
+                      <li className="flex items-start gap-2"><span className="text-[#4a5d23] mt-0.5">●</span> <span>{t("PSR-ready replanting documentation", "Dokumentasi siap-PSR untuk peremajaan")}</span></li>
+                    </ul>
+                  </div>
+
+                  {/* Price */}
+                  <div className="flex-1 bg-white border border-stone-300 p-6 flex flex-col">
+                    <div className="text-[#8b5a2b] font-mono text-xl mb-4 border-b border-stone-200 pb-2 shrink-0 leading-none">
+                      {t("Price", "Harga")}
+                    </div>
+                    <ul className="text-sm text-stone-600 font-light space-y-2.5 flex-1">
+                      <li className="flex items-start gap-2"><span className="text-[#8b5a2b] mt-0.5">●</span> <span>{t("Pay-per-scan: Rp 25k/ha (individuals)", "Bayar per pindai: Rp 25rb/ha (individu)")}</span></li>
+                      <li className="flex items-start gap-2"><span className="text-[#8b5a2b] mt-0.5">●</span> <span>{t("Subscription: Rp 2.5m/mo (cooperatives)", "Langganan: Rp 2,5jt/bln (koperasi)")}</span></li>
+                      <li className="flex items-start gap-2"><span className="text-[#8b5a2b] mt-0.5">●</span> <span>{t("Enterprise: Rp 150m/yr (large estates)", "Enterprise: Rp 150jt/thn (perusahaan besar)")}</span></li>
+                      <li className="flex items-start gap-2"><span className="text-[#8b5a2b] mt-0.5">●</span> <span>{t("Penetration pricing to drive adoption", "Harga penetrasi untuk mendorong adopsi")}</span></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="flex gap-5 flex-1 min-h-0">
+                  {/* Place */}
+                  <div className="flex-1 bg-white border border-stone-300 p-6 flex flex-col">
+                    <div className="text-stone-800 font-mono text-xl mb-4 border-b border-stone-200 pb-2 shrink-0 leading-none">
+                      {t("Place", "Tempat / Distribusi")}
+                    </div>
+                    <ul className="text-sm text-stone-600 font-light space-y-2.5 flex-1">
+                      <li className="flex items-start gap-2"><span className="text-stone-800 mt-0.5">●</span> <span>{t("Direct via web platform & mobile app", "Langsung via platform web & aplikasi mobile")}</span></li>
+                      <li className="flex items-start gap-2"><span className="text-stone-800 mt-0.5">●</span> <span>{t("KUD/cooperative channel partnerships", "Kemitraan distribusi koperasi/KUD")}</span></li>
+                      <li className="flex items-start gap-2"><span className="text-stone-800 mt-0.5">●</span> <span>{t("WhatsApp/Telegram community groups", "Grup komunitas WhatsApp/Telegram")}</span></li>
+                      <li className="flex items-start gap-2"><span className="text-stone-800 mt-0.5">●</span> <span>{t("On-ground field agents in endemic areas", "Agen lapangan di wilayah endemik")}</span></li>
+                    </ul>
+                  </div>
+
+                  {/* Promotion */}
+                  <div className="flex-1 bg-white border border-stone-300 p-6 flex flex-col">
+                    <div className="text-stone-800 font-mono text-xl mb-4 border-b border-stone-200 pb-2 shrink-0 leading-none">
+                      {t("Promotion", "Promosi")}
+                    </div>
+                    <ul className="text-sm text-stone-600 font-light space-y-2.5 flex-1">
+                      <li className="flex items-start gap-2"><span className="text-stone-800 mt-0.5">●</span> <span>{t("Free pilot scans for cooperative leads", "Pemindaian pilot gratis untuk pengurus koperasi")}</span></li>
+                      <li className="flex items-start gap-2"><span className="text-stone-800 mt-0.5">●</span> <span>{t("Agritech expo demos & field days", "Demo di pameran agritech & hari lapangan")}</span></li>
+                      <li className="flex items-start gap-2"><span className="text-stone-800 mt-0.5">●</span> <span>{t("Case study content marketing (yield saved)", "Konten pemasaran studi kasus (hasil terselamatkan)")}</span></li>
+                      <li className="flex items-start gap-2"><span className="text-stone-800 mt-0.5">●</span> <span>{t("Government PSR program integration", "Integrasi program PSR pemerintah")}</span></li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
