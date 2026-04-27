@@ -98,7 +98,26 @@ export default function App() {
     setIsExporting(true);
     setShowExport(true);
     // Let React flush the export container into the DOM
-    await new Promise((r) => setTimeout(r, 600));
+    await new Promise((r) => setTimeout(r, 300));
+
+    // Wait for all images inside the export container to finish loading
+    const exportContainer = document.getElementById('pdf-export-container');
+    if (exportContainer) {
+      const imgs = exportContainer.querySelectorAll('img');
+      await Promise.all(
+        Array.from(imgs).map(
+          (img) =>
+            img.complete
+              ? Promise.resolve()
+              : new Promise((resolve) => {
+                  img.onload = resolve;
+                  img.onerror = resolve;
+                })
+        )
+      );
+      // Small extra buffer for rendering
+      await new Promise((r) => setTimeout(r, 200));
+    }
 
     try {
       const { jsPDF } = window.jspdf;
